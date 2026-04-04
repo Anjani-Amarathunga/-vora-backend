@@ -1,0 +1,16 @@
+package com.vora.backend.product.dto.Admin_dto.response;
+
+import lombok.*;
+import java.time.LocalDateTime;
+@Data 
+@Builder 
+@NoArgsConstructor 
+@AllArgsConstructor
+public class CategoryResponse {
+    private Long id;
+    private String name;
+    private String description;
+    private String imageUrl;
+    private Boolean isActive;
+    private LocalDateTime createdAt;
+}
