@@ -19,12 +19,16 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+        java.time.LocalDateTime now = java.time.LocalDateTime.now();
+
         if (userRepository.findByEmail("admin@vora.com").isEmpty()) {
             userRepository.save(User.builder()
                     .fullName("Admin User")
                     .email("admin@vora.com")
                     .password(passwordEncoder.encode("admin123"))
                     .roles(Set.of(Role.ADMIN))
+                    .createdAt(now)
+                    .updatedAt(now)
                     .build());
         }
 
@@ -34,6 +38,8 @@ public class DataInitializer implements CommandLineRunner {
                     .email("user@vora.com")
                     .password(passwordEncoder.encode("user123"))
                     .roles(Set.of(Role.CUSTOMER))
+                    .createdAt(now)
+                    .updatedAt(now)
                     .build());
         }
     }

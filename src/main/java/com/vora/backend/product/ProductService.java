@@ -17,6 +17,14 @@ public class ProductService {
         return productRepository.findAll().stream().map(this::toResponse).toList();
     }
 
+    public List<ProductResponse> searchByName(String q) {
+        return productRepository.findByNameContainingIgnoreCase(q).stream().map(this::toResponse).toList();
+    }
+
+    public List<ProductResponse> filterByPrice(java.math.BigDecimal min, java.math.BigDecimal max) {
+        return productRepository.findByPriceBetween(min, max).stream().map(this::toResponse).toList();
+    }
+
     public ProductResponse getProductById(Long id) {
         Product product = productRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Product not found: " + id));
@@ -58,7 +66,6 @@ public class ProductService {
                 product.getName(),
                 product.getDescription(),
                 product.getPrice(),
-                product.getStock()
-        );
+                product.getStock());
     }
 }
