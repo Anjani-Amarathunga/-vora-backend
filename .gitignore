@@ -1,4 +1,45 @@
-# Ignore local Spring Boot override file
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+
+# Build
+target/
+build/
+dist/
+*.class
+*.jar
+*.war
+*.ear
+
+# Environment & Secrets (CRITICAL - Never commit)
+.env
+.env.local
+.env.*.local
+*.properties.local
 application-local.yml
 
-target/
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+.m2/
+node_modules/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Upload directory
+uploads/

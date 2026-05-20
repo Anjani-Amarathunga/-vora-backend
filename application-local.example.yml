@@ -5,5 +5,5 @@ spring:
     password: yourPassword
 
 # Create this file as application-local.yml in your backend root if you want
-to keep your local DB credentials private.
+# to keep your local DB credentials private.
 # application-local.yml is ignored by Git.
