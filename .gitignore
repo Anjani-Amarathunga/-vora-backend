@@ -22,6 +22,7 @@ dist/
 .env.local
 .env.*.local
 *.properties.local
+application-local.yml
 
 # Logs
 *.log
