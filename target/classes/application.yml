@@ -1,7 +1,8 @@
 spring:
   profiles:
     active: dev
-
+  config:
+    import: optional:application-local.yml
 ---
 spring:
   config:
@@ -48,10 +49,10 @@ spring:
     activate:
       on-profile: mysql
   datasource:
-    url: jdbc:mysql://localhost:3306/vora_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    url: ${DB_URL:jdbc:mysql://localhost:3306/evora_db?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC}
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: root
+    username: ${DB_USER:evora_user}
+    password: ${DB_PASSWORD:}
     hikari:
       maximum-pool-size: 10
       minimum-idle: 5
