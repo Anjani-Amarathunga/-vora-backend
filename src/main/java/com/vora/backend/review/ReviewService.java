@@ -1,7 +1,7 @@
 package com.vora.backend.review;
 
-import com.vora.backend.product.Product;
-import com.vora.backend.product.ProductRepository;
+import com.vora.backend.user.Admin_entity.Product;
+import com.vora.backend.repository.Admin_repository.ProductRepository;
 import com.vora.backend.review.dto.AddReviewRequest;
 import com.vora.backend.review.dto.ProductReviewsResponse;
 import com.vora.backend.review.dto.ReviewResponse;

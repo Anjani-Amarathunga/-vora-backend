@@ -2,7 +2,7 @@ package com.vora.backend.order;
 
 import com.vora.backend.order.dto.OrderResponse;
 import com.vora.backend.order.dto.PlaceOrderRequest;
-import com.vora.backend.user.User;
+import com.vora.backend.user.Admin_entity.User;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

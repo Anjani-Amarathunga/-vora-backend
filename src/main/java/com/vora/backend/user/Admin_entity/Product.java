@@ -44,4 +44,12 @@ public class Product {
 
     @PreUpdate
     public void preUpdate() { this.updatedAt = LocalDateTime.now(); }
+
+    public Integer getStock() {
+        return this.stockQty;
+    }
+
+    public void setStock(Integer stock) {
+        this.stockQty = stock;
+    }
 }

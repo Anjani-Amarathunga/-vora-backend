@@ -7,7 +7,7 @@ import com.vora.backend.product.dto.Admin_dto.response.ProductResponse;
 import com.vora.backend.user.Admin_entity.*;
 import com.vora.backend.exception.ResourceNotFoundException;
 import com.vora.backend.repository.Admin_repository.*;
-import com.vora.backend.service.Admin_services.ProductService;
+import com.vora.backend.product.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.*;

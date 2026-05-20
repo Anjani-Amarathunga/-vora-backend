@@ -4,8 +4,8 @@ import com.vora.backend.cart.CartItemRepository;
 import com.vora.backend.order.dto.OrderItemResponse;
 import com.vora.backend.order.dto.OrderResponse;
 import com.vora.backend.order.dto.PlaceOrderRequest;
-import com.vora.backend.product.Product;
-import com.vora.backend.product.ProductRepository;
+import com.vora.backend.user.Admin_entity.Product;
+import com.vora.backend.repository.Admin_repository.ProductRepository;
 import com.vora.backend.cart.CartItem;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class OrderService {
 
-    private final OrderRepository orderRepository;
+    private final UserOrderRepository orderRepository;
     private final OrderItemRepository orderItemRepository;
     private final CartItemRepository cartItemRepository;
     private final ProductRepository productRepository;

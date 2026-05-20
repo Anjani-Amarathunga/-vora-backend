@@ -1,6 +1,6 @@
 package com.vora.backend.cart;
 
-import com.vora.backend.product.Product;
+import com.vora.backend.user.Admin_entity.Product;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

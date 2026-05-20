@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity @Table(name = "orders")
+@Entity(name = "AdminOrder") @Table(name = "admin_orders")
 @Data 
 @NoArgsConstructor 
 @AllArgsConstructor 
@@ -45,7 +45,7 @@ public class Order {
     private String notes;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<OrderItem> items = new ArrayList<>();
+    private List<AdminOrderItem> items = new ArrayList<>();
 
     @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
     private Payment payment;
