@@ -1,83 +1,39 @@
 spring:
+  application:
+    name: vora-backend
   profiles:
     active: dev
-
----
-spring:
-  config:
-    activate:
-      on-profile: dev
   datasource:
-    url: jdbc:h2:mem:voradb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: false
-    properties:
-      hibernate:
-        format_sql: true
-  jackson:
-    serialization:
-      write-dates-as-timestamps: false
-
-server:
-  port: 8080
-  servlet:
-    context-path: /
-
-app:
-  jwt:
-    secret: c3VwZXItc2VjcmV0LWtleS1mb3Itdm9yYS1iYWNrZW5kLWRldi1tb2Rl
-    expiration-ms: 86400000
-
-logging:
-  level:
-    root: INFO
-    com.vora.backend: DEBUG
-
----
-spring:
-  config:
-    activate:
-      on-profile: mysql
-  datasource:
-    url: jdbc:mysql://localhost:3306/vora_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    url: ${DB_URL:jdbc:mysql://localhost:3306/evora_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:password}
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: root
-    hikari:
-      maximum-pool-size: 10
-      minimum-idle: 5
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: false
     properties:
       hibernate:
-        format_sql: true
-        dialect: org.hibernate.dialect.MySQL8Dialect
-  jackson:
-    serialization:
-      write-dates-as-timestamps: false
+        dialect: org.hibernate.dialect.MySQLDialect
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
 
 server:
   port: 8080
-  servlet:
-    context-path: /
 
 app:
   jwt:
-    secret: c3VwZXItc2VjcmV0LWtleS1mb3Itdm9yYS1iYWNrZW5kLWRldi1tb2Rl
-    expiration-ms: 86400000
+    secret: ${JWT_SECRET:evora_ecommerce_admin_super_secret_key_2024_do_not_share}
+    expiration: 86400000
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:5173,http://localhost:3000}
+  upload:
+    dir: uploads/
 
-logging:
-  level:
-    root: INFO
-    com.vora.backend: DEBUG
+stripe:
+  api:
+    key: ${STRIPE_API_KEY:sk_test_placeholder}
+  webhook:
+    secret: ${STRIPE_WEBHOOK_SECRET:whsec_placeholder}

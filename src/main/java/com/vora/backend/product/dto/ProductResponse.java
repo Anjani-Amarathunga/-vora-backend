@@ -1,12 +1,5 @@
 package com.vora.backend.product.dto;
 
-import java.math.BigDecimal;
-
-public record ProductResponse(
-        Long id,
-        String name,
-        String description,
-        BigDecimal price,
-        Integer stock
-) {
+// Re-export ProductResponse
+public class ProductResponse extends com.vora.backend.product.dto.Admin_dto.response.ProductResponse {
 }

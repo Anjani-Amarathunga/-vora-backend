@@ -3,7 +3,7 @@ package com.vora.backend.review;
 import com.vora.backend.review.dto.AddReviewRequest;
 import com.vora.backend.review.dto.ProductReviewsResponse;
 import com.vora.backend.review.dto.ReviewResponse;
-import com.vora.backend.user.User;
+import com.vora.backend.user.Admin_entity.User;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

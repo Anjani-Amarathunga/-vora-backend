@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/evora_db?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    username: evora_user
+    password: yourPassword
+
+# Create this file as application-local.yml in your backend root if you want
+# to keep your local DB credentials private.
+# application-local.yml is ignored by Git.
