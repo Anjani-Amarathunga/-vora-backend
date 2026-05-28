@@ -58,6 +58,7 @@ D:\-vora-backend\src\main\java\com\vora\backend\product\dto\Admin_dto\response\P
 D:\-vora-backend\src\main\java\com\vora\backend\product\dto\Admin_dto\response\UserResponse.java
 D:\-vora-backend\src\main\java\com\vora\backend\product\dto\ProductRequest.java
 D:\-vora-backend\src\main\java\com\vora\backend\product\dto\ProductResponse.java
+D:\-vora-backend\src\main\java\com\vora\backend\product\Product.java
 D:\-vora-backend\src\main\java\com\vora\backend\product\ProductController.java
 D:\-vora-backend\src\main\java\com\vora\backend\product\ProductService.java
 D:\-vora-backend\src\main\java\com\vora\backend\repository\Admin_repository\AdminNotificationRepository.java

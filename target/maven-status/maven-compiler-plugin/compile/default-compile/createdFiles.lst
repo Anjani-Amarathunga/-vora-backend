@@ -65,6 +65,7 @@ com\vora\backend\user\Admin_entity\Transaction$TransactionBuilder.class
 com\vora\backend\controller\Admin\AdminCategoryController.class
 com\vora\backend\product\dto\Admin_dto\response\AuthResponse$AuthResponseBuilder.class
 com\vora\backend\product\dto\Admin_dto\response\CategoryResponse$CategoryResponseBuilder.class
+com\vora\backend\product\Product.class
 com\vora\backend\product\dto\Admin_dto\response\AdminNotificationResponse.class
 com\vora\backend\controller\Admin\AdminOrderController.class
 com\vora\backend\controller\Admin\AdminSettingsController.class
